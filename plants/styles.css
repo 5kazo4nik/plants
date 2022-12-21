@@ -1,0 +1,132 @@
+@font-face {
+  font-family: 'Inika';
+  src: url('./assets/Fonts/Inika-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('./assets/Fonts/Inter-VariableFont_slnt\,wght.ttf');
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.html {
+  scroll-behavior: smooth;
+  text-size-adjust: auto;
+  -webkit-text-size-adjust: auto;
+}
+
+body {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: 400;
+  font-family: 'Inika';
+}
+
+.main-header {
+  background-color: #edf2ec;
+}
+
+.header-wrapper {
+  max-width: 1440px;
+  margin: auto;
+}
+
+.header-content {
+  width: 1220px;
+  height: 50px;
+  margin: 42px auto 42px auto;
+  display: flex;
+  justify-content: space-between;
+  color: #010201;
+}
+
+.header-icon {
+  font-family: 'Inika';
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.header-icon p {
+  position: relative;
+  padding-left: 23px;
+  width: 80px;
+  height: 22px;
+}
+
+.header-icon p::before {
+  content: '';
+  position: absolute;
+  left: 0%;
+  bottom: 25%;
+  width: 22px;
+  height: 22px;
+  background-image: url(./assets/Svg/logo_vector.svg);
+}
+
+.nav-list {
+  width: 452px;
+  height: 50px;
+  color: #010201;
+  font-family: 'Inika';
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.nav-list ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-item:nth-child(1) {
+  font-weight: 700;
+  color: #e06733;
+}
+
+/* HEADER END /////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.welcome-wrapper {
+  background-color: #edf2ec;
+}
+
+.welcome {
+  max-width: 1440px;
+  margin: auto;
+  padding: 62px 0px 62px 0px;
+}
+
+.content-welcome {
+  width: 1222px;
+  height: 407.5px;
+  margin: 62px auto 0px auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-side-welcome {
+  width: 449px;
+  height: 407.5px;
+  background-image: url(./assets/Img/leafs.png);
+  background-size: cover;
+}
+
+.right-side-welcome {
+  width: 549px;
+  height: 340px;
+  font-family: 'Inter';
+}
