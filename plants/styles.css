@@ -98,7 +98,7 @@ h2 {
   color: #e06733;
 }
 
-/* HEADER END /////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* HEADER END __________________________________________________________________________________________________ */
 
 .welcome-wrapper {
   background-color: #edf2ec;
@@ -129,4 +129,192 @@ h2 {
   width: 549px;
   height: 340px;
   font-family: 'Inter';
+  align-self: center;
+}
+
+.title-welcome {
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 50px;
+  color: #717171;
+  margin: 0px 0px 42px 0px;
+}
+
+.title-welcome span {
+  color: #499a18;
+}
+
+.right-side-welcome p {
+  width: 524px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 35px;
+  color: #636060;
+  margin: 0px 0px 48px 0px;
+}
+
+.btn-welcome {
+  width: 158px;
+  height: 44px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+  border: 2px solid #e06733;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* about_____________________________________________________________________________________________________ */
+
+.about {
+  margin: auto;
+  max-width: 1440px;
+}
+
+.content-about {
+  width: 1222px;
+  height: 479px;
+  margin: 93px auto 94px auto;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 400;
+}
+
+.left-side-about {
+  width: 605px;
+  height: 350px;
+  align-self: center;
+}
+
+.title-about {
+  font-family: 'Inika';
+  font-size: 40px;
+  line-height: 52px;
+  width: 463px;
+  height: 102px;
+  color: #e06733;
+  margin: 0px 0px 40px 0px;
+}
+
+.title-about span {
+  color: #499a18;
+}
+
+.left-side-about p {
+  margin: 0;
+  width: 605px;
+  font-family: 'Inter';
+  font-size: 20px;
+  line-height: 30px;
+  color: #636060;
+}
+
+.right-side-about {
+  width: 464px;
+  height: 479px;
+}
+
+.right-side-about img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* service______________________________________________________________________________________________ */
+
+.service-wrapper {
+  background-color: #edf2ec;
+}
+
+.service {
+  max-width: 1440px;
+  height: 1300px;
+  margin: auto;
+}
+
+.header-service {
+  font-family: 'Inika';
+  font-weight: 400;
+  margin: 0px 324px 90px 109px;
+  padding-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  width: 1007px;
+}
+
+.header-service h2 {
+  margin: 0;
+  width: 306px;
+  font-size: 40px;
+  line-height: 52px;
+  color: #499a18;
+  height: 94px;
+}
+
+.btn-group-service {
+  width: 559px;
+  align-self: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-service {
+  width: 161px;
+  height: 50px;
+  border: 1px solid #e06733;
+  color: #e06733;
+  font-size: 20px;
+  line-height: 26px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.content-service {
+  font-family: 'Inter';
+  line-height: 20px;
+  width: 1222px;
+  height: 955px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 55px;
+  flex-wrap: wrap;
+  margin-bottom: 121px;
+}
+
+.content-item-service {
+  width: 330px;
+  height: 450px;
+  border: 1px solid #e3e1d5;
+  border-radius: 20px;
+}
+
+.content-img {
+  width: 329px;
+  height: 350px;
+}
+
+.content-img img {
+  border-radius: 20px 20px 0px 0px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content-item-service h3 {
+  font-weight: 700;
+  font-size: 20px;
+  color: #e06733;
+  text-align: center;
+  margin: 10px 0px;
+}
+
+.content-item-service p {
+  font-weight: 400;
+  font-size: 16px;
+  color: #717171;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 36px;
 }
