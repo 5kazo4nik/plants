@@ -12,10 +12,10 @@
   box-sizing: border-box;
 }
 
-.html {
+html {
   scroll-behavior: smooth;
-  text-size-adjust: auto;
-  -webkit-text-size-adjust: auto;
+  /* text-size-adjust: auto; */
+  /* -webkit-text-size-adjust: auto; */
 }
 
 body {
@@ -32,8 +32,6 @@ a {
 
 h2 {
   font-size: 40px;
-  font-weight: 400;
-  font-family: 'Inika';
 }
 
 .main-header {
@@ -106,6 +104,7 @@ h2 {
 
 .welcome {
   max-width: 1440px;
+  height: 532px;
   margin: auto;
   padding: 62px 0px 62px 0px;
 }
@@ -113,7 +112,7 @@ h2 {
 .content-welcome {
   width: 1222px;
   height: 407.5px;
-  margin: 62px auto 0px auto;
+  margin: 0px auto 0px auto;
   display: flex;
   justify-content: space-between;
 }
@@ -162,6 +161,7 @@ h2 {
   color: #000000;
   border: 2px solid #e06733;
   border-radius: 10px;
+  text-transform: uppercase;
   cursor: pointer;
 }
 
@@ -189,6 +189,7 @@ h2 {
 
 .title-about {
   font-family: 'Inika';
+  font-weight: 400;
   font-size: 40px;
   line-height: 52px;
   width: 463px;
@@ -234,8 +235,6 @@ h2 {
 }
 
 .header-service {
-  font-family: 'Inika';
-  font-weight: 400;
   margin: 0px 324px 90px 109px;
   padding-top: 40px;
   display: flex;
@@ -244,9 +243,10 @@ h2 {
 }
 
 .header-service h2 {
+  font-weight: 400;
+  font-family: 'Inika';
   margin: 0;
   width: 306px;
-  font-size: 40px;
   line-height: 52px;
   color: #499a18;
   height: 94px;
@@ -264,6 +264,8 @@ h2 {
   height: 50px;
   border: 1px solid #e06733;
   color: #e06733;
+  font-family: 'Inika';
+  font-weight: 400;
   font-size: 20px;
   line-height: 26px;
   border-radius: 5px;
@@ -317,4 +319,246 @@ h2 {
   text-align: center;
   margin-top: 0;
   margin-bottom: 36px;
+}
+
+/* prices_________________________________________________________________ */
+
+.prices {
+  width: 1440px;
+  height: 560px;
+  margin: auto;
+}
+
+.content-prices {
+  width: 1222px;
+  height: 405px;
+  margin: 0 auto 115px auto;
+  padding-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-side-prices {
+  font-family: 'Inter';
+}
+
+.left-side-prices h2 {
+  margin: 0 0 60px 0;
+  font-weight: 700;
+  line-height: 48.5px;
+  color: #000000;
+  font-family: 'Inter';
+}
+
+.list-prices-container {
+  width: 332px;
+  height: 282px;
+  border: 1px solid #e3e1d5;
+  border-radius: 20px;
+}
+
+.list-prices {
+  width: 250px;
+  height: 214px;
+  margin: 34px 41px 34px 41px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: space-between;
+}
+
+.item-price {
+  background-color: #edf2ec;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.header-item-price {
+  width: 250px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-price h3 {
+  margin: 0;
+  width: 100px;
+  height: 18px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  margin: 16px 0px 16px 40px;
+}
+
+.drop-btn {
+  width: 16px;
+  height: 16px;
+  margin: 17px 40px 17px 0px;
+  background-color: #d9d9d9;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow-drop-btn {
+  width: 4px;
+  height: 4px;
+  border-top: 1px solid #717171;
+  border-right: 1px solid #717171;
+  transform: rotate(135deg);
+}
+
+.right-side-prices {
+  width: 452px;
+  height: 405px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.right-side-prices h2 {
+  font-family: 'Inter';
+  font-weight: 700;
+  line-height: 50px;
+  text-align: right;
+  width: 452px;
+  height: 103px;
+  margin: 0 0 38px 0;
+  color: #000000;
+}
+
+.right-side-prices h2 span {
+  color: #499a18;
+}
+
+.btn-prices {
+  font-family: 'Inika';
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+  width: 162px;
+  height: 50px;
+  margin: 0 0 39px 0;
+  color: #e06733;
+  border: 1px solid #e06733;
+  border-radius: 5px;
+}
+
+.right-side-prices img {
+  width: 152px;
+  height: 175px;
+}
+
+/* contacts ____________________________________________________________________ */
+
+.contacts-wrapper {
+  background-color: #edf2ec;
+}
+
+.contacts {
+  width: 1440px;
+  height: 550px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-woman {
+  width: 400px;
+  height: 497px;
+  order: 1;
+  align-self: end;
+  margin-left: 109px;
+}
+
+.contact-woman img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contacts h2 {
+  width: 195px 51px;
+  margin: 60px 64px 0px 113px;
+  font-family: 'Inika';
+  font-weight: 700;
+  line-height: 52px;
+  color: #499a18;
+  order: 2;
+}
+
+.list-contacts {
+  width: 450px;
+  height: 50px;
+  margin: 148px 109px 0px 0px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #d6e7d2;
+  box-shadow: 0px 4px 4px rgb(0, 0, 0, 0.25);
+  order: 3;
+}
+
+.list-contacts p {
+  margin: 5px 0 5px 20px;
+  font-family: 'Inter';
+  font-size: 20px;
+  line-height: 40px;
+}
+
+.btn-contacts {
+  margin: 17px 35px 17px 0;
+  background-color: #aea1a1;
+}
+
+.btn-contacts .arrow-drop-btn {
+  border-top: 1px solid #ffffff;
+  border-right: 1px solid #ffffff;
+}
+
+/* footer__________________________________________________________________________________________ */
+
+footer {
+  width: 1440px;
+  height: 130px;
+  margin: auto;
+}
+
+.footer-content {
+  width: 1222px;
+  height: 50px;
+  margin: 40px auto 40px auto;
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 50px;
+}
+
+.footer-data {
+  width: 182px;
+  height: 50px;
+}
+
+.footer-data ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-list {
+  width: 188px;
+  height: 50px;
+}
+
+.social-list ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
 }
