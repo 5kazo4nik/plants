@@ -1,11 +1,25 @@
 @font-face {
   font-family: 'Inika';
   src: url('./assets/Fonts/Inika-Regular.ttf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Inika-bold';
+  src: url('./assets/Fonts/Inika-Bold.ttf');
+  font-weight: 700;
 }
 
 @font-face {
   font-family: 'Inter';
   src: url('./assets/Fonts/Inter-VariableFont_slnt\,wght.ttf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Inter-bold';
+  src: url('./assets/Fonts/Inter-VariableFont_slnt\,wght.ttf');
+  font-weight: 700;
 }
 
 * {
@@ -54,8 +68,8 @@ h2 {
 
 .header-icon {
   font-family: 'Inika';
+  color: #000000;
   font-size: 16px;
-  font-weight: 400;
 }
 
 .header-icon p {
@@ -80,7 +94,6 @@ h2 {
   height: 50px;
   color: #010201;
   font-family: 'Inika';
-  font-weight: 400;
   font-size: 16px;
 }
 
@@ -92,7 +105,7 @@ h2 {
 }
 
 .nav-item:nth-child(1) {
-  font-weight: 700;
+  font-family: 'Inika-bold';
   color: #e06733;
 }
 
@@ -132,7 +145,7 @@ h2 {
 }
 
 .title-welcome {
-  font-weight: 700;
+  font-family: 'Inter-bold';
   font-size: 45px;
   line-height: 50px;
   color: #717171;
@@ -145,7 +158,6 @@ h2 {
 
 .right-side-welcome p {
   width: 524px;
-  font-weight: 400;
   font-size: 20px;
   line-height: 35px;
   color: #636060;
@@ -155,10 +167,11 @@ h2 {
 .btn-welcome {
   width: 158px;
   height: 44px;
-  font-weight: 400;
+  font-family: 'Inter';
   font-size: 16px;
   line-height: 20px;
   color: #000000;
+  background-color: inherit;
   border: 2px solid #e06733;
   border-radius: 10px;
   text-transform: uppercase;
@@ -178,7 +191,6 @@ h2 {
   margin: 93px auto 94px auto;
   display: flex;
   justify-content: space-between;
-  font-weight: 400;
 }
 
 .left-side-about {
@@ -265,11 +277,12 @@ h2 {
   border: 1px solid #e06733;
   color: #e06733;
   font-family: 'Inika';
-  font-weight: 400;
   font-size: 20px;
   line-height: 26px;
   border-radius: 5px;
   cursor: pointer;
+  margin-top: 15px;
+  background-color: inherit;
 }
 
 .content-service {
@@ -305,7 +318,7 @@ h2 {
 }
 
 .content-item-service h3 {
-  font-weight: 700;
+  font-family: 'Inter-bold';
   font-size: 20px;
   color: #e06733;
   text-align: center;
@@ -338,16 +351,12 @@ h2 {
   justify-content: space-between;
 }
 
-.left-side-prices {
-  font-family: 'Inter';
-}
-
 .left-side-prices h2 {
   margin: 0 0 60px 0;
   font-weight: 700;
   line-height: 48.5px;
   color: #000000;
-  font-family: 'Inter';
+  font-family: 'Inter-bold';
 }
 
 .list-prices-container {
@@ -381,11 +390,11 @@ h2 {
   align-items: center;
 }
 
-.item-price h3 {
+.title-item-price {
   margin: 0;
   width: 100px;
   height: 18px;
-  font-weight: 700;
+  font-family: 'Inter-bold';
   font-size: 20px;
   line-height: 20px;
   margin: 16px 0px 16px 40px;
@@ -419,8 +428,7 @@ h2 {
 }
 
 .right-side-prices h2 {
-  font-family: 'Inter';
-  font-weight: 700;
+  font-family: 'Inter-bold';
   line-height: 50px;
   text-align: right;
   width: 452px;
@@ -444,6 +452,7 @@ h2 {
   color: #e06733;
   border: 1px solid #e06733;
   border-radius: 5px;
+  background-color: inherit;
 }
 
 .right-side-prices img {
@@ -482,8 +491,7 @@ h2 {
 .contacts h2 {
   width: 195px 51px;
   margin: 60px 64px 0px 113px;
-  font-family: 'Inika';
-  font-weight: 700;
+  font-family: 'Inika-bold';
   line-height: 52px;
   color: #499a18;
   order: 2;
@@ -505,6 +513,7 @@ h2 {
   font-family: 'Inter';
   font-size: 20px;
   line-height: 40px;
+  color: #717171;
 }
 
 .btn-contacts {
@@ -532,9 +541,9 @@ footer {
   display: flex;
   justify-content: space-between;
   font-family: 'Inter';
-  font-weight: 400;
   font-size: 20px;
   line-height: 50px;
+  color: #000000;
 }
 
 .footer-data {
@@ -548,6 +557,11 @@ footer {
   list-style: none;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.footer-data ul li:nth-child(3) {
+  padding-right: 13px;
 }
 
 .social-list {
@@ -561,4 +575,5 @@ footer {
   list-style: none;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
