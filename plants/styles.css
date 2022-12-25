@@ -109,6 +109,16 @@ h2 {
   color: #e06733;
 }
 
+.btn {
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  color: #ffffff;
+  background-color: #e06733;
+}
+
 /* HEADER END __________________________________________________________________________________________________ */
 
 .welcome-wrapper {
@@ -175,7 +185,7 @@ h2 {
   border: 2px solid #e06733;
   border-radius: 10px;
   text-transform: uppercase;
-  cursor: pointer;
+  transition: all 0.5s;
 }
 
 /* about_____________________________________________________________________________________________________ */
@@ -280,9 +290,9 @@ h2 {
   font-size: 20px;
   line-height: 26px;
   border-radius: 5px;
-  cursor: pointer;
   margin-top: 15px;
   background-color: inherit;
+  transition: all 0.5s;
 }
 
 .content-service {
@@ -427,8 +437,9 @@ h2 {
   align-items: flex-end;
 }
 
-.right-side-prices h2 {
+.right-side-prices p {
   font-family: 'Inter-bold';
+  font-size: 40px;
   line-height: 50px;
   text-align: right;
   width: 452px;
@@ -437,7 +448,7 @@ h2 {
   color: #000000;
 }
 
-.right-side-prices h2 span {
+.right-side-prices p span {
   color: #499a18;
 }
 
@@ -453,6 +464,7 @@ h2 {
   border: 1px solid #e06733;
   border-radius: 5px;
   background-color: inherit;
+  transition: all 0.5s;
 }
 
 .right-side-prices img {
@@ -505,6 +517,7 @@ h2 {
   justify-content: space-between;
   background-color: #d6e7d2;
   box-shadow: 0px 4px 4px rgb(0, 0, 0, 0.25);
+  cursor: pointer;
   order: 3;
 }
 
@@ -549,18 +562,18 @@ footer {
 .footer-data {
   width: 182px;
   height: 50px;
-}
-
-.footer-data ul {
   margin: 0;
   padding: 0;
-  list-style: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.footer-data ul li:nth-child(3) {
+.footer-data p {
+  margin: 0;
+}
+
+.footer-data p:nth-child(3) {
   padding-right: 13px;
 }
 
