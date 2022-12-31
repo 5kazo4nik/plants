@@ -22,6 +22,12 @@
   font-weight: 700;
 }
 
+@font-face {
+  font-family: 'Inter-thin';
+  src: url('./assets/Fonts/Inter-VariableFont_slnt\,wght.ttf');
+  font-weigth: 300;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -808,19 +814,20 @@ h2 {
 
 .list-prices-container {
   width: 332px;
-  height: 282px;
+  min-height: 282px;
   border: 1px solid #e3e1d5;
   border-radius: 20px;
 }
 
 .list-prices {
   width: 250px;
-  height: 214px;
+  min-height: 214px;
   margin: 34px 41px 34px 41px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-content: space-between;
+  gap: 32px;
 }
 
 .item-price {
@@ -829,12 +836,28 @@ h2 {
   cursor: pointer;
 }
 
+.item-price-active {
+  height: 154px;
+  background-color: #d6e7d2;
+}
+
 .header-item-price {
   width: 250px;
   height: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+}
+
+.header-item-price-active::before {
+  content: '';
+  width: 162px;
+  height: 0.5px;
+  background-color: #aea1a1;
+  position: absolute;
+  left: 40px;
+  bottom: 4px;
 }
 
 .title-item-price {
@@ -865,6 +888,63 @@ h2 {
   border-right: 1px solid #717171;
   transform: rotate(135deg);
 }
+
+.drop-btn-active {
+  background-color: #aea1a1;
+}
+
+.arrow-drop-btn-active {
+  border-top: 1px solid #ffffff;
+  border-right: 1px solid #ffffff;
+  transform: rotate(-45deg) translate(-20%, 20%);
+}
+
+.content-item-price {
+  height: 90px;
+  margin: 2px 40px 12px 40px;
+}
+
+.content-item-price p:nth-child(1) {
+  margin: 0 0 6px 0;
+  font-family: 'Inter-thin';
+  font-size: 10px;
+  line-height: 10px;
+  color: #717171;
+}
+
+.content-item-price p:nth-child(2) {
+  margin: 0 0 12px 0;
+  font-family: 'Inter';
+  font-size: 12px;
+  line-height: 20px;
+  color: #000000;
+}
+
+.content-item-price p:nth-child(2) span {
+  font-family: 'Inter-bold';
+  color: #e06733;
+}
+
+.content-item-price p:nth-child(2) span:nth-child(2) {
+  font-size: 16px;
+}
+
+.content-item-price button {
+  width: 86px;
+  height: 25px;
+  border: none;
+  border-radius: 10px;
+}
+
+.content-item-price button a {
+  font-family: 'Inter-bold';
+  font-size: 14px;
+  line-height: 20px;
+  color: #717171;
+  margin-right: 10px;
+}
+
+/* rigth side */
 
 .right-side-prices {
   max-width: 452px;
@@ -981,14 +1061,15 @@ h2 {
 
   .list-prices-container {
     width: 224px;
-    height: 235px;
+    min-height: 235px;
     margin-bottom: 19px;
   }
 
   .list-prices {
     width: 180px;
-    height: 177px;
+    min-height: 177px;
     margin: 29px auto 29px auto;
+    gap: 13.9px;
   }
 
   .header-item-price {
@@ -996,11 +1077,52 @@ h2 {
     height: 50px;
   }
 
+  .header-item-price-active::before {
+    width: 105px;
+    left: 30px;
+    bottom: 6px;
+  }
+
   .title-item-price {
     width: 89px;
     height: 17px;
     font-size: 15px;
     margin: 16px 0px 16px 30px;
+  }
+
+  .content-item-price {
+    height: 90px;
+    margin: 2px 30px 12px 30px;
+  }
+
+  .content-item-price p:nth-child(1) {
+    margin: 0 0 4px 0;
+    font-size: 9px;
+    line-height: 10px;
+    color: #717171;
+  }
+
+  .content-item-price p:nth-child(2) {
+    margin: 0 0 8px 0;
+    font-size: 11px;
+  }
+
+  .content-item-price p:nth-child(2) span {
+    font-family: 'Inter-bold';
+    color: #e06733;
+  }
+
+  .content-item-price p:nth-child(2) span:nth-child(2) {
+    font-size: 15px;
+  }
+
+  .content-item-price button {
+    width: 70px;
+    height: 20px;
+  }
+
+  .content-item-price button a {
+    font-size: 12px;
   }
 
   .right-side-prices {
@@ -1106,6 +1228,59 @@ h2 {
   border-right: 1px solid #ffffff;
 }
 
+/* Cities */
+
+.city-contacts {
+  width: 450px;
+  height: 214px;
+  border: 1px solid #000000;
+  border-radius: 20px;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+}
+
+.city-contacts-info {
+  width: 339px;
+  margin: 17px 0 15px 33px;
+  display: flex;
+  gap: 15px;
+}
+
+.city-contacts-info div {
+  display: flex;
+  flex-direction: column;
+}
+
+.city-contacts-info div p {
+  margin: 0;
+  font-family: 'Inter';
+  font-size: 16px;
+  line-height: 40px;
+}
+
+.city-contacts-info div:nth-child(2) p {
+  color: #717171;
+}
+
+.city-contacts button {
+  width: 122px;
+  height: 26px;
+  border: 1px solid #e06733;
+  border-radius: 5px;
+  margin: 0 auto 32px auto;
+  font-family: 'Inika-bold';
+  font-size: 10px;
+  line-height: 13px;
+  color: #717171;
+  transition: all 0.5s;
+}
+
+.city-contacts button:hover {
+  background-color: #e06733;
+  color: #ffffff;
+}
+
 @media (max-width: 1000px) {
   .contacts {
     max-width: 768px;
@@ -1113,7 +1288,7 @@ h2 {
     margin: auto;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: unset;
   }
 
   .contact-woman {
@@ -1126,13 +1301,13 @@ h2 {
   .contacts h2 {
     max-width: 192px;
     min-height: 51px;
-    margin: 40px auto 100px auto;
+    margin: 40px auto 69px auto;
     order: 1;
   }
 
   .list-contacts-container {
     height: 300px;
-    margin: 0 auto 0px auto;
+    margin: 31px auto 0 auto;
     order: 2;
   }
 
@@ -1145,6 +1320,7 @@ h2 {
   .contacts {
     max-width: 380px;
     min-height: 445px;
+    justify-content: unset;
   }
 
   .contact-woman {
@@ -1156,15 +1332,15 @@ h2 {
   .contacts h2 {
     max-width: 192px;
     min-height: 34px;
-    margin: 25px auto 80px auto;
+    margin: 25px auto 42px auto;
     font-size: 25px;
     line-height: 32.5px;
   }
 
   .list-contacts-container {
     width: 300px;
-    height: 182px;
-    margin: 0 auto 0 auto;
+    height: 50px;
+    margin: 38px auto 0 auto;
   }
 
   .list-contacts {
@@ -1175,6 +1351,39 @@ h2 {
   .btn-contacts {
     margin: 17px 20px 17px 0;
     background-color: #aea1a1;
+  }
+
+  .city-contacts {
+    width: 282px;
+    height: 212px;
+    margin: auto;
+  }
+
+  .city-contacts-info {
+    width: 208px;
+    margin: 23px auto 0 auto;
+    display: flex;
+    gap: 15px;
+  }
+
+  .city-contacts-info div {
+    gap: 10px;
+  }
+
+  .city-contacts-info div p {
+    margin: 0;
+    font-family: 'Inter';
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .city-contacts-info div:nth-child(1) {
+    width: 64.7px;
+  }
+
+  .city-contacts button {
+    width: 121.4px;
+    margin: auto;
   }
 }
 
