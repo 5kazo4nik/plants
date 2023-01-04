@@ -33,3 +33,60 @@ burgerBtn.addEventListener('click', () => {
     });
   });
 });
+
+const btnService = [...document.querySelectorAll('.btn-service')];
+const itemService = [...document.getElementsByClassName('content-item-service')];
+
+let sum = 0;
+
+btnService.forEach((el) => {
+  btnService[0].addEventListener('click', (e) => {
+    if (sum < 2 && !btnService[0].classList.contains('btn-service-active')) {
+      e.target.classList.add('btn-service-active');
+      itemService[0].classList.add('content-item-service-active');
+      itemService[4].classList.add('content-item-service-active');
+      sum += 1;
+    } else if (sum <= 2 && btnService[0].classList.contains('btn-service-active')) {
+      e.target.classList.remove('btn-service-active');
+      itemService[0].classList.remove('content-item-service-active');
+      itemService[4].classList.remove('content-item-service-active');
+      sum -= 1;
+    }
+  });
+
+  btnService[1].onclick = (e) => {
+    if (sum < 2 && !btnService[1].classList.contains('btn-service-active')) {
+      e.target.classList.add('btn-service-active');
+      itemService[2].classList.add('content-item-service-active');
+      sum += 1;
+    } else if (sum <= 2 && btnService[1].classList.contains('btn-service-active')) {
+      e.target.classList.remove('btn-service-active');
+      itemService[2].classList.remove('content-item-service-active');
+      sum -= 1;
+    }
+  };
+
+  btnService[2].addEventListener('click', (e) => {
+    if (sum < 2 && !btnService[2].classList.contains('btn-service-active')) {
+      e.target.classList.add('btn-service-active');
+      itemService[1].classList.add('content-item-service-active');
+      itemService[3].classList.add('content-item-service-active');
+      itemService[5].classList.add('content-item-service-active');
+      sum += 1;
+    } else if (sum <= 2 && btnService[2].classList.contains('btn-service-active')) {
+      e.target.classList.remove('btn-service-active');
+      itemService[1].classList.remove('content-item-service-active');
+      itemService[3].classList.remove('content-item-service-active');
+      itemService[5].classList.remove('content-item-service-active');
+      sum -= 1;
+    }
+  });
+
+  el.addEventListener('click', () => {
+    itemService.forEach((el) => el.classList.add('blur'));
+    const activeBtn = document.querySelectorAll('.btn-service-active');
+    if (!activeBtn.length || sum === 0) {
+      itemService.forEach((el) => el.classList.remove('blur'));
+    }
+  });
+});
