@@ -851,6 +851,7 @@ h2 {
   background-color: #edf2ec;
   border-radius: 20px;
   cursor: pointer;
+  transition: 0.5s ease-out;
 }
 
 .item-price-active {
@@ -865,6 +866,7 @@ h2 {
   justify-content: space-between;
   align-items: center;
   position: relative;
+  transition: 0.5s ease-out;
 }
 
 .header-item-price-active::before {
@@ -875,6 +877,7 @@ h2 {
   position: absolute;
   left: 40px;
   bottom: 4px;
+  transition: 0.5s ease-out;
 }
 
 .title-item-price {
@@ -896,6 +899,7 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 0.5s ease-out;
 }
 
 .arrow-drop-btn {
@@ -904,6 +908,7 @@ h2 {
   border-top: 1px solid #717171;
   border-right: 1px solid #717171;
   transform: rotate(135deg);
+  transition: 0.5s ease-out;
 }
 
 .drop-btn-active {
@@ -919,6 +924,12 @@ h2 {
 .content-item-price {
   height: 90px;
   margin: 2px 40px 12px 40px;
+  display: none;
+  transition: 0.5s ease-out;
+}
+
+.content-item-price-active {
+  display: block;
 }
 
 .content-item-price p:nth-child(1) {
@@ -927,6 +938,7 @@ h2 {
   font-size: 10px;
   line-height: 10px;
   color: #717171;
+  transition: 0.5s ease-out;
 }
 
 .content-item-price p:nth-child(2) {
@@ -935,6 +947,7 @@ h2 {
   font-size: 12px;
   line-height: 20px;
   color: #000000;
+  transition: 0.5s ease-out;
 }
 
 .content-item-price p:nth-child(2) span {
@@ -951,6 +964,7 @@ h2 {
   height: 25px;
   border: none;
   border-radius: 10px;
+  transition: 0.5s ease-out;
 }
 
 .content-item-price button a {

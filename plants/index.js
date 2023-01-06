@@ -90,3 +90,53 @@ btnService.forEach((el) => {
     }
   });
 });
+
+const itemPrice = [...document.getElementsByClassName('item-price')];
+const dropBtnPrice = [...document.querySelectorAll('[data-btn=price]')];
+
+dropBtnPrice.forEach((btn) => {
+  btn.addEventListener('click', (e) => {
+    btn.classList.toggle('drop-btn-active');
+    btn.querySelector('.arrow-drop-btn').classList.toggle('arrow-drop-btn-active');
+    e.target.closest('.header-item-price').classList.toggle('header-item-price-active');
+    const currentItemPrice = e.target.closest('.item-price');
+    currentItemPrice.classList.toggle('item-price-active');
+    currentItemPrice.querySelector('.content-item-price').classList.toggle('content-item-price-active');
+
+    const activeBtn = [...document.getElementsByClassName('drop-btn-active')];
+    if (activeBtn.length > 1) {
+      activeBtn.forEach((item) => {
+        if (item !== btn) {
+          item.classList.remove('drop-btn-active');
+          item.querySelector('.arrow-drop-btn').classList.remove('arrow-drop-btn-active');
+          item.closest('.header-item-price').classList.remove('header-item-price-active');
+          const prevItemPrice = item.closest('.item-price');
+          prevItemPrice.classList.remove('item-price-active');
+          prevItemPrice.querySelector('.content-item-price').classList.remove('content-item-price-active');
+        }
+      });
+    }
+  });
+});
+
+// dropBtnPrice.forEach((btn) => {
+//   btn.addEventListener('click', (e) => {
+//     btn.classList.toggle('drop-btn-active');
+//     btn.querySelector('.arrow-drop-btn').classList.toggle('arrow-drop-btn-active');
+//     e.target.closest('.header-item-price').classList.toggle('header-item-price-active');
+//     const currentItemPrice = e.target.closest('.item-price');
+//     currentItemPrice.classList.toggle('item-price-active');
+//     currentItemPrice.querySelector('.content-item-price').classList.toggle('content-item-price-active');
+
+//     const activeItems = document.getElementsByClassName('item-price-active');
+//     if (activeItems.length > 1) {
+//       itemPrice.forEach((item) => {
+//         item.querySelector('.drop-btn').classList.remove('drop-btn-active');
+//         item.querySelector('.arrow-drop-btn').classList.remove('arrow-drop-btn-active');
+//         item.querySelector('.header-item-price').classList.remove('header-item-price-active');
+//         item.classList.remove('item-price-active');
+//         item.querySelector('.content-item-price').classList.remove('content-item-price-active');
+//       });
+//     }
+//   });
+// });
