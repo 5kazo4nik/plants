@@ -848,10 +848,11 @@ h2 {
 }
 
 .item-price {
+  height: 50px;
   background-color: #edf2ec;
   border-radius: 20px;
   cursor: pointer;
-  transition: 0.5s ease-out;
+  transition: 0.5s ease;
 }
 
 .item-price-active {
@@ -866,7 +867,7 @@ h2 {
   justify-content: space-between;
   align-items: center;
   position: relative;
-  transition: 0.5s ease-out;
+  transition: 0.5s ease;
 }
 
 .header-item-price-active::before {
@@ -877,7 +878,6 @@ h2 {
   position: absolute;
   left: 40px;
   bottom: 4px;
-  transition: 0.5s ease-out;
 }
 
 .title-item-price {
@@ -924,30 +924,32 @@ h2 {
 .content-item-price {
   height: 90px;
   margin: 2px 40px 12px 40px;
-  display: none;
-  transition: 0.5s ease-out;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s ease-out, opacity 0.3s step-end;
 }
 
 .content-item-price-active {
-  display: block;
+  visibility: visible;
+  opacity: 1;
 }
 
 .content-item-price p:nth-child(1) {
+  height: auto;
   margin: 0 0 6px 0;
   font-family: 'Inter-thin';
   font-size: 10px;
   line-height: 10px;
   color: #717171;
-  transition: 0.5s ease-out;
 }
 
 .content-item-price p:nth-child(2) {
+  height: auto;
   margin: 0 0 12px 0;
   font-family: 'Inter';
   font-size: 12px;
   line-height: 20px;
   color: #000000;
-  transition: 0.5s ease-out;
 }
 
 .content-item-price p:nth-child(2) span {
@@ -964,7 +966,6 @@ h2 {
   height: 25px;
   border: none;
   border-radius: 10px;
-  transition: 0.5s ease-out;
 }
 
 .content-item-price button a {
@@ -1205,6 +1206,8 @@ h2 {
   order: 1;
   align-self: end;
   margin-left: 109px;
+  position: relative;
+  z-index: 1;
 }
 
 .contact-woman img {
@@ -1228,9 +1231,10 @@ h2 {
   height: 400px;
   margin: 148px 109px 0px 0px;
   order: 3;
+  position: relative;
 }
 
-.list-contacts {
+.header-select {
   width: 450px;
   height: 50px;
   margin: 0;
@@ -1239,9 +1243,15 @@ h2 {
   background-color: #d6e7d2;
   box-shadow: 0px 4px 4px rgb(0, 0, 0, 0.25);
   cursor: pointer;
+  transition: 0.5s ease-in-out;
 }
 
-.list-contacts p {
+.header-select-active {
+  box-shadow: none;
+  background-color: #c1e698;
+}
+
+.header-select p {
   margin: 5px 0 5px 20px;
   font-family: 'Inter';
   font-size: 20px;
@@ -1249,14 +1259,65 @@ h2 {
   color: #717171;
 }
 
-.btn-contacts {
+.btn-select {
   margin: 17px 35px 17px 0;
   background-color: #aea1a1;
 }
 
-.btn-contacts .arrow-drop-btn {
+.btn-select .arrow-drop-btn {
   border-top: 1px solid #ffffff;
   border-right: 1px solid #ffffff;
+}
+
+.contacts-select {
+  background-color: #dce9d9;
+  position: relative;
+  z-index: 3;
+}
+
+.content-select-items {
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  height: 0px;
+  overflow: hidden;
+  margin: 0 auto 0 auto;
+  transition: 0.5s ease-in-out;
+}
+
+.content-select-items-active {
+  gap: 12px;
+  height: 100%;
+  padding: 27px 0 31px 0;
+}
+
+.select-item {
+  color: #499a18;
+  font-family: 'Inter';
+  font-size: 16px;
+  height: 0;
+  overflow: hidden;
+  border-bottom: 1px solid #d9d9d9;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: 0.5s ease-in-out;
+}
+
+.select-item-active {
+  opacity: 1;
+  height: 35px;
+}
+
+.select-item:hover {
+  color: #717171;
+  border-bottom: 1px solid #717171;
+}
+
+.select-item p {
+  margin: 0 0 0 6px;
 }
 
 /* Cities */
@@ -1269,6 +1330,15 @@ h2 {
   background-color: transparent;
   display: flex;
   flex-direction: column;
+  position: absolute;
+  top: 47px;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.city-contacts-active {
+  margin-top: 47px;
+  opacity: 1;
 }
 
 .city-contacts-info {
@@ -1299,7 +1369,7 @@ h2 {
   height: 26px;
   border: 1px solid #e06733;
   border-radius: 5px;
-  margin: 0 auto 32px auto;
+  margin: 0 163px 32px 163px;
   font-family: 'Inika-bold';
   font-size: 10px;
   line-height: 13px;
@@ -1342,8 +1412,8 @@ h2 {
     order: 2;
   }
 
-  .list-contacts {
-    margin-bottom: 61px;
+  .city-contacts-active {
+    margin-top: 61px;
   }
 }
 
@@ -1357,7 +1427,13 @@ h2 {
   .contact-woman {
     width: 100px;
     height: 124.2px;
-    margin: 0 auto 0 auto;
+    margin: auto auto 0 auto;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  .contact-woman-active {
+    opacity: 0;
   }
 
   .contacts h2 {
@@ -1374,9 +1450,8 @@ h2 {
     margin: 38px auto 0 auto;
   }
 
-  .list-contacts {
+  .header-select {
     width: 300px;
-    margin-bottom: 49px;
   }
 
   .btn-contacts {
@@ -1390,15 +1465,19 @@ h2 {
     margin: auto;
   }
 
+  .city-contacts-active {
+    margin-top: 49pxpx;
+  }
+
   .city-contacts-info {
     width: 208px;
-    margin: 23px auto 0 auto;
+    margin: 30px auto 0 auto;
     display: flex;
     gap: 15px;
   }
 
   .city-contacts-info div {
-    gap: 10px;
+    gap: 15px;
   }
 
   .city-contacts-info div p {
@@ -1414,7 +1493,11 @@ h2 {
 
   .city-contacts button {
     width: 121.4px;
-    margin: auto;
+    margin: 20px 74px 23px 86px;
+  }
+
+  .content-select-items {
+    max-width: 230px;
   }
 }
 

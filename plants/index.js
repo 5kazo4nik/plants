@@ -92,25 +92,25 @@ btnService.forEach((el) => {
 });
 
 const itemPrice = [...document.getElementsByClassName('item-price')];
-const dropBtnPrice = [...document.querySelectorAll('[data-btn=price]')];
+const headsPrice = [...document.querySelectorAll('.header-item-price')];
 
-dropBtnPrice.forEach((btn) => {
-  btn.addEventListener('click', (e) => {
-    btn.classList.toggle('drop-btn-active');
-    btn.querySelector('.arrow-drop-btn').classList.toggle('arrow-drop-btn-active');
-    e.target.closest('.header-item-price').classList.toggle('header-item-price-active');
+headsPrice.forEach((head) => {
+  head.addEventListener('click', (e) => {
+    head.classList.toggle('header-item-price-active');
+    head.querySelector('.arrow-drop-btn').classList.toggle('arrow-drop-btn-active');
+    head.querySelector('.drop-btn').classList.toggle('drop-btn-active');
     const currentItemPrice = e.target.closest('.item-price');
     currentItemPrice.classList.toggle('item-price-active');
     currentItemPrice.querySelector('.content-item-price').classList.toggle('content-item-price-active');
 
-    const activeBtn = [...document.getElementsByClassName('drop-btn-active')];
-    if (activeBtn.length > 1) {
-      activeBtn.forEach((item) => {
-        if (item !== btn) {
-          item.classList.remove('drop-btn-active');
-          item.querySelector('.arrow-drop-btn').classList.remove('arrow-drop-btn-active');
-          item.closest('.header-item-price').classList.remove('header-item-price-active');
-          const prevItemPrice = item.closest('.item-price');
+    const activeHeadsPrice = [...document.getElementsByClassName('header-item-price-active')];
+    if (activeHeadsPrice.length > 1) {
+      activeHeadsPrice.forEach((activeHead) => {
+        if (activeHead !== head) {
+          activeHead.classList.remove('header-item-price-active');
+          activeHead.querySelector('.arrow-drop-btn').classList.remove('arrow-drop-btn-active');
+          activeHead.querySelector('.drop-btn').classList.remove('drop-btn-active');
+          const prevItemPrice = activeHead.closest('.item-price');
           prevItemPrice.classList.remove('item-price-active');
           prevItemPrice.querySelector('.content-item-price').classList.remove('content-item-price-active');
         }
@@ -119,24 +119,46 @@ dropBtnPrice.forEach((btn) => {
   });
 });
 
-// dropBtnPrice.forEach((btn) => {
-//   btn.addEventListener('click', (e) => {
-//     btn.classList.toggle('drop-btn-active');
-//     btn.querySelector('.arrow-drop-btn').classList.toggle('arrow-drop-btn-active');
-//     e.target.closest('.header-item-price').classList.toggle('header-item-price-active');
-//     const currentItemPrice = e.target.closest('.item-price');
-//     currentItemPrice.classList.toggle('item-price-active');
-//     currentItemPrice.querySelector('.content-item-price').classList.toggle('content-item-price-active');
+const headerSelect = document.querySelector('.header-select');
+const cities = [...document.querySelectorAll('.city-contacts')];
 
-//     const activeItems = document.getElementsByClassName('item-price-active');
-//     if (activeItems.length > 1) {
-//       itemPrice.forEach((item) => {
-//         item.querySelector('.drop-btn').classList.remove('drop-btn-active');
-//         item.querySelector('.arrow-drop-btn').classList.remove('arrow-drop-btn-active');
-//         item.querySelector('.header-item-price').classList.remove('header-item-price-active');
-//         item.classList.remove('item-price-active');
-//         item.querySelector('.content-item-price').classList.remove('content-item-price-active');
-//       });
-//     }
-//   });
-// });
+headerSelect.addEventListener('click', () => {
+  headerSelect.classList.toggle('header-select-active');
+  if (headerSelect.querySelector('p').textContent !== 'City') {
+    headerSelect.classList.add('header-select-active');
+  }
+  // headerSelect.querySelector('p').textContent = 'City';
+
+  document.querySelector('.content-select-items').classList.toggle('content-select-items-active');
+  headerSelect.querySelector('.drop-btn').classList.toggle('drop-btn-active');
+  headerSelect.querySelector('.arrow-drop-btn').classList.toggle('arrow-drop-btn-active');
+  [...document.querySelectorAll('.select-item')].forEach((item) => item.classList.toggle('select-item-active'));
+
+  if (headerSelect.classList.contains('header-select-active')) {
+    document.querySelector('.contact-woman').classList.add('contact-woman-active');
+  } else {
+    document.querySelector('.contact-woman').classList.remove('contact-woman-active');
+  }
+  // cities.forEach((city) => city.classList.remove('city-contacts-active'));
+});
+
+[...document.querySelectorAll('.select-item')].forEach((item) => {
+  item.addEventListener('click', () => {
+    const name = item.querySelector('p').textContent;
+    headerSelect.querySelector('p').textContent = name;
+
+    document.querySelector('.content-select-items').classList.remove('content-select-items-active');
+    headerSelect.querySelector('.drop-btn').classList.remove('drop-btn-active');
+    headerSelect.querySelector('.arrow-drop-btn').classList.remove('arrow-drop-btn-active');
+    [...document.querySelectorAll('.select-item')].forEach((item) => item.classList.remove('select-item-active'));
+
+    cities.forEach((city) => {
+      const address = city.querySelectorAll('p')[3].textContent;
+      if (address !== name) {
+        city.classList.remove('city-contacts-active');
+      } else {
+        city.classList.add('city-contacts-active');
+      }
+    });
+  });
+});
