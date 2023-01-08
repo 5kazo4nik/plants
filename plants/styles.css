@@ -374,6 +374,10 @@ h2 {
   transition: all 0.5s;
 }
 
+.btn-welcome a {
+  padding: 10px 10px 10px 10px;
+}
+
 @media (max-width: 1000px) {
   .welcome {
     max-width: 768px;
@@ -966,6 +970,7 @@ h2 {
   height: 25px;
   border: none;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .content-item-price button a {
@@ -974,6 +979,7 @@ h2 {
   line-height: 20px;
   color: #717171;
   margin-right: 10px;
+  padding: 4px 20px 4px 10px;
 }
 
 /* rigth side */
@@ -1014,6 +1020,10 @@ h2 {
   border-radius: 5px;
   background-color: inherit;
   transition: all 0.5s;
+}
+
+.btn-prices a {
+  padding: 10px 10px 10px 10px;
 }
 
 .right-side-prices img {
@@ -1232,6 +1242,7 @@ h2 {
   margin: 148px 109px 0px 0px;
   order: 3;
   position: relative;
+  transition: 0.5s ease-in-out;
 }
 
 .header-select {
@@ -1252,11 +1263,20 @@ h2 {
 }
 
 .header-select p {
-  margin: 5px 0 5px 20px;
   font-family: 'Inter';
   font-size: 20px;
   line-height: 40px;
   color: #717171;
+}
+
+[data-offset='true'] {
+  margin: 5px 0 5px 35px;
+  transition: 0.5s ease-in-out;
+}
+
+[data-offset='false'] {
+  margin: 5px 0 5px 20px;
+  transition: 0.5s ease-in-out;
 }
 
 .btn-select {
@@ -1333,11 +1353,13 @@ h2 {
   position: absolute;
   top: 47px;
   opacity: 0;
-  transition: 0.5s;
+  visibility: hidden;
+  transition: all 0.5s, visibility 2s;
 }
 
 .city-contacts-active {
   margin-top: 47px;
+  visibility: visible;
   opacity: 1;
 }
 
@@ -1375,6 +1397,11 @@ h2 {
   line-height: 13px;
   color: #717171;
   transition: all 0.5s;
+  cursor: pointer;
+}
+
+.city-contacts button a {
+  padding: 5px 30px;
 }
 
 .city-contacts button:hover {
@@ -1410,6 +1437,11 @@ h2 {
     height: 300px;
     margin: 31px auto 0 auto;
     order: 2;
+  }
+
+  .list-contacts-container-active {
+    margin-top: 0px;
+    margin-bottom: 31px;
   }
 
   .city-contacts-active {
@@ -1450,8 +1482,17 @@ h2 {
     margin: 38px auto 0 auto;
   }
 
+  .list-contacts-container {
+    margin-top: 0px;
+    margin-bottom: 38px;
+  }
+
   .header-select {
     width: 300px;
+  }
+
+  [data-offset='true'] {
+    margin-left: 20px;
   }
 
   .btn-contacts {
@@ -1462,18 +1503,20 @@ h2 {
   .city-contacts {
     width: 282px;
     height: 212px;
-    margin: auto;
+    margin: 0 auto 0 auto;
+    right: 9px;
   }
 
   .city-contacts-active {
-    margin-top: 49pxpx;
+    margin-top: 49px;
+    margin: 49px auto 0 auto;
   }
 
   .city-contacts-info {
     width: 208px;
     margin: 30px auto 0 auto;
     display: flex;
-    gap: 15px;
+    gap: 10px;
   }
 
   .city-contacts-info div {

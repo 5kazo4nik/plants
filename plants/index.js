@@ -1,5 +1,5 @@
 console.log(
-  '1. Вёрстка соответствует макету. Ширина экрана 768px: +24;\n2. Вёрстка соответствует макету. Ширина экрана 380px: +24;\n3. Ни на одном из разрешений до 320px включительно не появляется горизонтальная полоса прокрутки. Весь контент страницы при этом сохраняется: не обрезается и не удаляется: +15;\n4. На ширине экрана 380рх и меньше реализовано адаптивное меню: +22\nИтого: 75'
+  '1. При нажатии на кнопки:Gargens,Lawn,Planting происходит смена фокуса на услугах в разделе service +50;\n2. Accordion в секции prices реализация 3-х выпадающих списков об услугах и ценах + 50;\n3. В разделе contacts реализован select с выбором городов +25;\nИтого: 100'
 );
 
 const navList = document.querySelector('.nav-list');
@@ -127,19 +127,24 @@ headerSelect.addEventListener('click', () => {
   if (headerSelect.querySelector('p').textContent !== 'City') {
     headerSelect.classList.add('header-select-active');
   }
-  // headerSelect.querySelector('p').textContent = 'City';
+  headerSelect.querySelector('p').textContent = 'City';
 
   document.querySelector('.content-select-items').classList.toggle('content-select-items-active');
   headerSelect.querySelector('.drop-btn').classList.toggle('drop-btn-active');
   headerSelect.querySelector('.arrow-drop-btn').classList.toggle('arrow-drop-btn-active');
   [...document.querySelectorAll('.select-item')].forEach((item) => item.classList.toggle('select-item-active'));
 
+  cities.forEach((city) => city.classList.remove('city-contacts-active'));
+
   if (headerSelect.classList.contains('header-select-active')) {
     document.querySelector('.contact-woman').classList.add('contact-woman-active');
+    document.querySelector('.list-contacts-container').classList.add('list-contacts-container-active');
+    document.querySelector('[data-offset="false"]').dataset.offset = 'true';
   } else {
+    document.querySelector('[data-offset="true"]').dataset.offset = 'false';
     document.querySelector('.contact-woman').classList.remove('contact-woman-active');
+    document.querySelector('.list-contacts-container').classList.remove('list-contacts-container-active');
   }
-  // cities.forEach((city) => city.classList.remove('city-contacts-active'));
 });
 
 [...document.querySelectorAll('.select-item')].forEach((item) => {
