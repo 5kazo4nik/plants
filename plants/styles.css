@@ -122,6 +122,12 @@ h2 {
   justify-content: space-between;
 }
 
+.nav-item:hover {
+  font-family: 'Inika-bold';
+  color: #e06733;
+  transition: 0.2s;
+}
+
 .nav-item:nth-child(1) {
   font-family: 'Inika-bold';
   color: #e06733;
@@ -298,7 +304,7 @@ h2 {
     margin-left: 40px;
   }
 
-  .nav-item:nth-child(1) {
+  .nav-item a:hover {
     font-family: 'Inika-bold';
     color: #edf2ec;
   }
