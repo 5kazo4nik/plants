@@ -128,11 +128,6 @@ h2 {
   transition: 0.2s;
 }
 
-.nav-item:nth-child(1) {
-  font-family: 'Inika-bold';
-  color: #e06733;
-}
-
 .btn {
   transition: all 0.5s;
   cursor: pointer;
@@ -424,7 +419,7 @@ h2 {
     max-width: 341px;
     font-size: 16px;
     line-height: 25px;
-    margin: 0px 0px 30px 0px;
+    margin: 0px 0px 35px 3px;
   }
 }
 
@@ -1106,7 +1101,7 @@ h2 {
     max-width: 90px;
     min-height: 27px;
     text-align: center;
-    margin: 0 auto 40px auto;
+    margin: 0 auto 35px auto;
     font-size: 25px;
     line-height: 30.2px;
   }
@@ -1433,7 +1428,7 @@ h2 {
     width: 200px;
     height: 248.5px;
     order: 3;
-    margin: 0 auto 0 auto;
+    margin: 0 274px 0 294px;
   }
 
   .contacts h2 {
@@ -1493,6 +1488,10 @@ h2 {
   }
 
   .list-contacts-container {
+    margin-top: 38px;
+  }
+
+  .list-contacts-container-active {
     margin-top: 0px;
     margin-bottom: 38px;
   }
@@ -1551,6 +1550,10 @@ h2 {
 
   .content-select-items {
     max-width: 230px;
+  }
+
+  .btn-select {
+    margin-right: 20px;
   }
 }
 
@@ -1667,5 +1670,9 @@ h2 {
     max-width: 210px;
     min-height: 117px;
     margin: 22px auto 7px auto;
+  }
+
+  .footer-content div:nth-child(2) {
+    margin-top: 10px;
   }
 }
