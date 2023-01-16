@@ -1466,11 +1466,13 @@ h2 {
     height: 124.2px;
     margin: auto auto 0 auto;
     opacity: 1;
-    transition: opacity 0.5s ease-in-out;
+    visibility: visible;
+    transition: opacity 0.5s ease-in-out, visibility 2s;
   }
 
   .contact-woman-active {
     opacity: 0;
+    visibility: hidden;
   }
 
   .contacts h2 {
