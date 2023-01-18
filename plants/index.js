@@ -2,6 +2,8 @@ console.log(
   '1. Вёрстка соответствует макету. Ширина экрана 768px: +24;\n2. Вёрстка соответствует макету. Ширина экрана 380px: +24;\n3. Ни на одном из разрешений до 320px включительно не появляется горизонтальная полоса прокрутки. Весь контент страницы при этом сохраняется: не обрезается и не удаляется: +15;\n4. На ширине экрана 380рх и меньше реализовано адаптивное меню: +22\nИтого: 75\n\n1. При нажатии на кнопки:Gargens,Lawn,Planting происходит смена фокуса на услугах в разделе service +50;\n2. Accordion в секции prices реализация 3-х выпадающих списков об услугах и ценах + 50;\n3. В разделе contacts реализован select с выбором городов +25;\nИтого: 100'
 );
 
+// Burger menu
+
 const navList = document.querySelector('.nav-list');
 const navListBg = document.querySelector('.nav-list-bg');
 const burgerBtn = document.querySelector('.burger-btn');
@@ -33,6 +35,8 @@ burgerBtn.addEventListener('click', () => {
     });
   });
 });
+
+// Blur at section service buttons
 
 const btnService = [...document.querySelectorAll('.btn-service')];
 const itemService = [...document.getElementsByClassName('content-item-service')];
@@ -91,6 +95,8 @@ btnService.forEach((el) => {
   });
 });
 
+// Accordeon at prices section
+
 const itemPrice = [...document.getElementsByClassName('item-price')];
 const headsPrice = [...document.querySelectorAll('.header-item-price')];
 
@@ -119,6 +125,8 @@ headsPrice.forEach((head) => {
   });
 });
 
+// Custom select at contacts section
+
 const headerSelect = document.querySelector('.header-select');
 const cities = [...document.querySelectorAll('.city-contacts')];
 
@@ -139,7 +147,11 @@ headerSelect.addEventListener('click', () => {
   if (headerSelect.classList.contains('header-select-active')) {
     document.querySelector('.contact-woman').classList.add('contact-woman-active');
     document.querySelector('.list-contacts-container').classList.add('list-contacts-container-active');
-    document.querySelector('[data-offset="false"]').dataset.offset = 'true';
+    const cityOffset = document.querySelector('[data-offset="false"]');
+    if (cityOffset) {
+      cityOffset.dataset.offset = 'true';
+    }
+    // document.querySelector('[data-offset="false"]').dataset.offset = 'true';
   } else {
     document.querySelector('[data-offset="true"]').dataset.offset = 'false';
     document.querySelector('.contact-woman').classList.remove('contact-woman-active');
